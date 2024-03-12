@@ -23,7 +23,7 @@ export default function Home() {
 
         <section id="profile">
           <SectionHeaderText text="Profile" />
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 max-md:mx-2">
             けめるです。
             <br />
             主にゲーム開発・作曲・デザイン等をやっております。
@@ -50,7 +50,7 @@ export default function Home() {
 
         <section id="works">
           <SectionHeaderText text="Works" />
-          <div className="grid grid-cols-3 mx-auto space-x-2">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto space-x-2">
             <WorkCard
               title="けめるのインターネット"
               link="https://qemel-blog-nextjs.vercel.app/"
@@ -105,7 +105,7 @@ export default function Home() {
 
         <section id="skills">
           <SectionHeaderText text="Skills" />
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 max-md:mx-2">
             - プログラミング: C#, JavaScript, TypeScript, Python
             <br />
             - ゲームエンジン: Unity
