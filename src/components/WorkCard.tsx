@@ -13,12 +13,14 @@ import { Badge } from "./ui/badge";
 import { Label } from "./ui/label";
 
 export const WorkCard = ({
+  genre,
   title,
   link,
   description,
   imageRef,
   tags,
 }: {
+  genre: string;
   title: string;
   link: string;
   description: string;
@@ -29,6 +31,7 @@ export const WorkCard = ({
     <Card className="w-[350px]">
       <CardHeader>
         <form>
+          <Badge variant={"outline"} className="mb-4 left-2 font-bold text-base">{genre}</Badge>
           <Link href={link}>
             <img src={imageRef} alt={title} width={600} height={600} />
           </Link>
