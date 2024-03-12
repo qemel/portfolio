@@ -43,7 +43,7 @@ export const Header = () => {
                     アウトプット記事
                   </ListItem>
                   <ListItem
-                    href="https://www.youtube.com/channel/@qemelly"
+                    href="https://www.youtube.com/@qemelly"
                     title="YouTube"
                   >
                     曲などの投稿
