@@ -15,81 +15,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Skills, genreBegins, workCards } from "@/lib/constants";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 4;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-
-interface WorkCardProps {
-  genre: string;
-  title: string;
-  link: string;
-  description: string;
-  imageRef: string;
-  tags: string[];
-}
-
-const workCards: WorkCardProps[] = [
-  {
-    genre: "Web",
-    title: "けめるのインターネット",
-    link: "https://qemel-blog-nextjs.vercel.app/",
-    description: "自分用のサイトです。",
-    imageRef: "/images/works/qemel-blog-nextjs.png",
-    tags: ["Next.js", "daisyUI", "TailWindCSS"],
-  },
-  {
-    genre: "Web",
-    title: "赤点レベルでさくさく進むDTM入門",
-    link: "https://music-tutorial-docs.vercel.app/",
-    description: "DTM(PC作曲)の支援サイトです。",
-    imageRef: "/images/works/dtm-web.png",
-    tags: ["Next.js", "Nextra", "Figma"],
-  },
-  {
-    genre: "Game",
-    title: "Here is ONE Button!",
-    link: "https://unityroom.com/games/here_is_one_button",
-    description:
-      "ルールが説明されないパズルゲームです。unity1weekで制作しました。",
-    imageRef: "/images/works/here-is-one-button.png",
-    tags: ["Music", "Unity", "C#"],
-  },
-  {
-    genre: "Game",
-    title: "Circla",
-    link: "https://unityroom.com/games/circla",
-    description: "2レーン+αなのに高難易度なリズムゲームです。",
-    imageRef: "/images/works/circla.gif",
-    tags: ["Music", "Unity", "C#", "Figma"],
-  },
-  {
-    genre: "Music",
-    title: "Circla Album",
-    link: "https://qemel-blog-nextjs.vercel.app/",
-    description: "Circlaの楽曲をまとめたアルバムです。",
-    imageRef: "/images/works/circla-album.png",
-    tags: ["Music", "Figma"],
-  },
-  {
-    genre: "Game",
-    title: "地獄のおくりびと",
-    link: "https://unityroom.com/games/jigokuno_okuribito",
-    description:
-      "地獄に送るためになんとか問答して絞りだすゲームです。unity1weekで制作しました。",
-    imageRef: "/images/works/hell.png",
-    tags: ["Music", "Unity", "C#", "Figma", "Aseprite"],
-  },
-  {
-    genre: "Music",
-    title: "Songs",
-    link: "https://www.youtube.com/playlist?list=PL-cydTzyfRl83vy7VTp5JmSoUCKKzcnua",
-    description: "その他楽曲です。",
-    imageRef: "/images/works/nobs.gif",
-    tags: ["Music", "Aseprite"],
-  },
-];
 
 export default function Home() {
   const [selectedTag, setSelectedTag] = useState<string>("All");
@@ -110,29 +49,37 @@ export default function Home() {
 
         <section id="profile">
           <SectionHeaderText text="Profile" />
-          <p className="text-lg mt-4 max-md:mx-2">
-            けめるです。
-            <br />
-            主にゲーム開発・作曲・デザイン等をやっております。
-            <br />
-            よろしくお願いします。
+          <p className="text-lg text-center mt-4 max-md:mx-2">
+            けめるです。主にゲーム開発・作曲・デザイン等をやっております。
             <br />
             <br />
-            - ゲーム制作: 2023.3~
+            Game Jamでのチーム開発の経験（デザイナー、プログラマを担当）
             <br />
-            - プログラミング: 2022.3~
-            <br />
-            - 作曲: 2020~
-            <br />
-            - デザイン: ちょっと
-            <br />
-            <br />
-            - Game Jamでのチーム開発の経験あり（デザイナー、プログラマを担当）
-            <br />
-            -
-            インターンにてカジュアルゲーム開発の経験あり（ゲーム制作全体を担当）
+            インターンにて3Dカジュアルゲーム開発の経験（ゲーム制作全体を担当）
             <br />
           </p>
+          <div className="pt-16">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>分野</TableHead>
+                  <TableHead>開始時期</TableHead>
+                  <TableHead>備考</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {genreBegins.map((genreBegin, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">
+                      {genreBegin.genre}
+                    </TableCell>
+                    <TableCell>{genreBegin.beginAt}</TableCell>
+                    <TableCell>{genreBegin.note}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </section>
 
         <section id="works">
@@ -168,18 +115,24 @@ export default function Home() {
 
         <section id="skills">
           <SectionHeaderText text="Skills" />
-          <p className="text-lg mt-4 max-md:mx-2">
-            - プログラミング: C#, JavaScript, TypeScript, Python
-            <br />
-            - ゲームエンジン: Unity
-            <br />
-            - DAW: FL Studio, Bitwig Studio
-            <br />
-            - デザイン: Figma
-            <br />
-            - 基本情報技術者試験取得
-            <br />- TOEIC Writing / Listening 895点
-          </p>
+          <div>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>ジャンル</TableHead>
+                  <TableHead>スキルセット</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {Skills.map((skill, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">{skill.genre}</TableCell>
+                    <TableCell>{skill.skills}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </section>
       </main>
 
