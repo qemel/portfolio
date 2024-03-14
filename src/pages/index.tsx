@@ -24,11 +24,17 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Skills, genreBegins, workCards } from "@/lib/constants";
+import dynamic from "next/dynamic";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 4;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const ScrollRevealContainer = dynamic(
+  () => import("@/components/ScrollRevealContainer"),
+  { ssr: false }
+);
 
 export default function Home() {
   const [selectedTag, setSelectedTag] = useState<string>("All");
@@ -98,19 +104,21 @@ export default function Home() {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <div className="pt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto space-x-2">
-            {filteredWorkCards.map((workCard, index) => (
-              <WorkCard
-                genre={workCard.genre}
-                key={index}
-                title={workCard.title}
-                link={workCard.link}
-                description={workCard.description}
-                imageRef={workCard.imageRef}
-                tags={workCard.tags}
-              />
-            ))}
-          </div>
+          <ScrollRevealContainer>
+            <div className="pt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-2">
+              {filteredWorkCards.map((workCard, index) => (
+                <WorkCard
+                  genre={workCard.genre}
+                  key={index}
+                  title={workCard.title}
+                  link={workCard.link}
+                  description={workCard.description}
+                  imageRef={workCard.imageRef}
+                  tags={workCard.tags}
+                />
+              ))}
+            </div>
+          </ScrollRevealContainer>
         </section>
 
         <section id="skills">

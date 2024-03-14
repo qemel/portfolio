@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { Badge } from "./ui/badge";
 import { Label } from "./ui/label";
+import Image from "next/image";
 
 export const WorkCard = ({
   genre,
@@ -33,7 +34,7 @@ export const WorkCard = ({
         <form>
           <Badge variant={"outline"} className="mb-4 left-2 font-bold text-base">{genre}</Badge>
           <Link href={link}>
-            <img src={imageRef} alt={title} width={600} height={600} />
+            <Image src={imageRef} alt={title} width={600} height={600} />
           </Link>
         </form>
       </CardHeader>

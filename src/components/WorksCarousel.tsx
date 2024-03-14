@@ -7,6 +7,7 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
+import Image from 'next/image'
 
 type PropType = {
   slides: number[]
@@ -40,7 +41,7 @@ const WorksCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <img src={workImagesRef[index]} width={800} height={600} alt={`works-${index + 1}`} />
+              <Image src={workImagesRef[index]} width={800} height={600} alt={`works-${index + 1}`} />
               {/* <div className="embla__slide__number">{index + 1}</div> */}
             </div>
           ))}
