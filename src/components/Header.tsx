@@ -30,7 +30,7 @@ export const Header = () => {
               <NavigationMenuTrigger>links</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 lg:w-[200px] bg-gray-300 bg-opacity-20">
-                  <li className="row-span-4">
+                  <li className="row-span-5">
                     <ListItem
                       href="https://qemelly.bandcamp.com"
                       title="bandcamp"
@@ -48,6 +48,12 @@ export const Header = () => {
                       title="YouTube"
                     >
                       曲などの投稿
+                    </ListItem>
+                    <ListItem
+                      href="https://atcoder.jp/users/Noth827"
+                      title="AtCoder"
+                    >
+                      競技プログラミング
                     </ListItem>
                   </li>
                 </ul>
