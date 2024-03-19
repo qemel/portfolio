@@ -126,6 +126,10 @@ export const Skills: SkillProps[] = [
     skills: "Figma, Aseprite, Affinity Designer",
   },
   {
+    genre: "アルゴリズム",
+    skills: "AtCoder rating 900~ (緑)",
+  },
+  {
     genre: "その他",
     skills: "基本情報技術者, TOEIC 895点",
   },
