@@ -49,6 +49,14 @@ export const genreBegins: GenreBeginProps[] = [
 
 export const workCards: WorkCardProps[] = [
   {
+    genre: "Game",
+    title: "White / Black",
+    link: "https://unityroom.com/games/worb",
+    description: "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました。",
+    imageRef: "/images/works/white-or-black.png",
+    tags: ["Unity", "C#", "Music"],
+  },
+  {
     genre: "Web",
     title: "けめるのインターネット",
     link: "https://qemel-blog-nextjs.vercel.app/",
