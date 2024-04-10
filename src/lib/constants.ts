@@ -52,7 +52,7 @@ export const workCards: WorkCardProps[] = [
     genre: "Game",
     title: "White / Black",
     link: "https://unityroom.com/games/worb",
-    description: "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました。",
+    description: "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキングにて8/302位獲得)。",
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
   },
