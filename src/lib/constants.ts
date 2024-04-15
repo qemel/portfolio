@@ -8,6 +8,7 @@ export interface GenreBeginProps {
 export interface WorkCardProps {
   genre: string;
   title: string;
+  date: string;
   link: string;
   description: string;
   imageRef: string;
@@ -51,30 +52,26 @@ export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
     title: "White / Black",
+    date: "2024-03",
     link: "https://unityroom.com/games/worb",
-    description: "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキングにて8/302位獲得)。",
+    description:
+      "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキング8位獲得)。",
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
   },
   {
     genre: "Web",
     title: "けめるのインターネット",
+    date: "2023-11",
     link: "https://qemel-blog-nextjs.vercel.app/",
     description: "自分用のサイトです。",
     imageRef: "/images/works/qemel-blog-nextjs.png",
     tags: ["Next.js", "daisyUI", "TailWindCSS"],
   },
   {
-    genre: "Web",
-    title: "赤点レベルでさくさく進むDTM入門",
-    link: "https://music-tutorial-docs.vercel.app/",
-    description: "DTM(PC作曲)の支援サイトです。",
-    imageRef: "/images/works/dtm-web.png",
-    tags: ["Next.js", "Nextra", "Figma"],
-  },
-  {
     genre: "Game",
     title: "Here is ONE Button!",
+    date: "2023-09",
     link: "https://unityroom.com/games/here_is_one_button",
     description:
       "ルールが説明されないパズルゲームです。インタラクティブ音楽を採用。unity1weekで制作しました。",
@@ -84,14 +81,17 @@ export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
     title: "Circla",
+    date: "2023-08",
     link: "https://unityroom.com/games/circla",
-    description: "2レーンなのに高難易度なリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。",
+    description:
+      "2レーンなのに高難易度なリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。",
     imageRef: "/images/works/circla.gif",
     tags: ["Music", "Unity", "C#", "Figma"],
   },
   {
     genre: "Music",
     title: "Circla Album",
+    date: "2023-08",
     link: "https://qemel-blog-nextjs.vercel.app/",
     description: "Circlaの楽曲をまとめたアルバムです。",
     imageRef: "/images/works/circla-album.png",
@@ -100,6 +100,7 @@ export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
     title: "地獄のおくりびと",
+    date: "2023-12",
     link: "https://unityroom.com/games/jigokuno_okuribito",
     description:
       "地獄に送るためになんとか問答して絞りだすゲームです。unity1weekで制作しました。",
@@ -109,6 +110,7 @@ export const workCards: WorkCardProps[] = [
   {
     genre: "Music",
     title: "Songs",
+    date: "2020-09から",
     link: "https://www.youtube.com/playlist?list=PL-cydTzyfRl83vy7VTp5JmSoUCKKzcnua",
     description: "その他楽曲です。",
     imageRef: "/images/works/nobs.gif",

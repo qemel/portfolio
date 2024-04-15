@@ -16,6 +16,7 @@ import Image from "next/image";
 export const WorkCard = ({
   genre,
   title,
+  date,
   link,
   description,
   imageRef,
@@ -23,6 +24,7 @@ export const WorkCard = ({
 }: {
   genre: string;
   title: string;
+  date: string;
   link: string;
   description: string;
   imageRef: string;
@@ -32,7 +34,12 @@ export const WorkCard = ({
     <Card className="w-[350px]">
       <CardHeader>
         <form>
-          <Badge variant={"outline"} className="mb-4 left-2 font-bold text-base">{genre}</Badge>
+          <Badge
+            variant={"outline"}
+            className="mb-4 left-2 font-bold text-base"
+          >
+            {genre}
+          </Badge>
           <Link href={link}>
             <Image src={imageRef} alt={title} width={600} height={600} />
           </Link>
@@ -43,14 +50,16 @@ export const WorkCard = ({
           <CardTitle>{title}</CardTitle>
         </Link>
         <div className="py-2">
+          <CardDescription>{date}</CardDescription>
+        </div>
+        <div className="py-2">
           <CardDescription>{description}</CardDescription>
         </div>
       </CardContent>
       <CardFooter>
         <div className="flex flex-col">
-          <Label htmlFor="framework">使用した技術</Label>
           <div className="flex space-x-2 pt-2">
-            {tags.map((tag) => (
+            {tags.sort().map((tag) => (
               <Badge key={tag}>{tag}</Badge>
             ))}
           </div>
