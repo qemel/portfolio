@@ -22,54 +22,34 @@ export const Header = () => {
             <NavigationMenuItem className="flex items-center justify-center">
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <Image className="center" src="/logo.png" alt="logo" width={40} height={40} />
+                  <Image
+                    className="center"
+                    src="/logo.png"
+                    alt="logo"
+                    width={40}
+                    height={40}
+                  />
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>links</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 lg:w-[200px] bg-gray-300 bg-opacity-20">
-                  <li className="row-span-5">
-                    <ListItem
-                      href="https://qemelly.bandcamp.com"
-                      title="bandcamp"
-                    >
-                      曲
-                    </ListItem>
-                    <ListItem href="https://github.com/Noth827" title="GitHub">
-                      コード
-                    </ListItem>
-                    <ListItem href="https://zenn.dev/qemel" title="zenn">
-                      アウトプット記事
-                    </ListItem>
-                    <ListItem
-                      href="https://www.youtube.com/@qemelly"
-                      title="YouTube"
-                    >
-                      曲などの投稿
-                    </ListItem>
-                    <ListItem
-                      href="https://atcoder.jp/users/Noth827"
-                      title="AtCoder"
-                    >
-                      競技プログラミング
-                    </ListItem>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <Link href="#links" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Links
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="#works" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  works
+                  Works
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="#skills" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  skills
+                  Skills
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
