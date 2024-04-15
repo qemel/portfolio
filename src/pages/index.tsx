@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table";
 import { Skills, genreBegins, workCards } from "@/lib/constants";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -55,7 +56,7 @@ export default function Home() {
 
         <section id="profile">
           <SectionHeaderText text="Profile" />
-          <p className="text-lg text-center mt-4 max-md:mx-2">
+          <p className="text-lg text-center max-md:mx-2">
             けめるです。主にゲーム開発・作曲・デザイン等をやっております。
             <br />
             <br />
@@ -88,6 +89,29 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="links">
+          <SectionHeaderText text="Links" />
+          <div className="flex flex-row items-center space-x-8">
+            <a href="https://zenn.dev/qemel">
+              <Image
+                src="/images/social-icons/logo-only.svg"
+                width={60}
+                height={60}
+                alt="zenn"
+              />
+            </a>
+            <a href="https://github.com/qemel">
+              <Image
+                src="/images/social-icons/github-mark.svg"
+                width={60}
+                height={60}
+                alt="github"
+              />
+            </a>
+
+          </div>
+        </section>
+
         <section id="works">
           <SectionHeaderText text="Works" />
           <Select onValueChange={(value) => setSelectedTag(value)}>
@@ -98,25 +122,28 @@ export default function Home() {
               <SelectGroup>
                 <SelectLabel>Tag</SelectLabel>
                 <SelectItem value="All">すべて</SelectItem>
-                <SelectItem value="Music">Music</SelectItem>
-                <SelectItem value="Web">Web</SelectItem>
                 <SelectItem value="Game">Game</SelectItem>
+                <SelectItem value="Web">Web</SelectItem>
+                <SelectItem value="Music">Music</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
           <ScrollRevealContainer>
             <div className="pt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-2">
-              {filteredWorkCards.map((workCard, index) => (
-                <WorkCard
-                  genre={workCard.genre}
-                  key={index}
-                  title={workCard.title}
-                  link={workCard.link}
-                  description={workCard.description}
-                  imageRef={workCard.imageRef}
-                  tags={workCard.tags}
-                />
-              ))}
+              {filteredWorkCards
+                .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+                .map((workCard, index) => (
+                  <WorkCard
+                    genre={workCard.genre}
+                    key={index}
+                    title={workCard.title}
+                    date={workCard.date}
+                    link={workCard.link}
+                    description={workCard.description}
+                    imageRef={workCard.imageRef}
+                    tags={workCard.tags}
+                  />
+                ))}
             </div>
           </ScrollRevealContainer>
         </section>
