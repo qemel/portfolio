@@ -129,7 +129,7 @@ export default function Home() {
             </SelectContent>
           </Select>
           <ScrollRevealContainer>
-            <div className="pt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-2">
+            <div className="grid grid-cols-3 pt-8 gap-4 space-y-1">
               {filteredWorkCards
                 .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 .map((workCard, index) => (
@@ -142,6 +142,7 @@ export default function Home() {
                     description={workCard.description}
                     imageRef={workCard.imageRef}
                     tags={workCard.tags}
+                    iframe={workCard.iframe || ""}
                   />
                 ))}
             </div>

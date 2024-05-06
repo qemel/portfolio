@@ -13,6 +13,7 @@ export interface WorkCardProps {
   description: string;
   imageRef: string;
   tags: string[];
+  iframe?: string;
 }
 
 export interface SkillProps {
@@ -58,6 +59,7 @@ export const workCards: WorkCardProps[] = [
       "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキング8位獲得)。",
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
+    iframe: "a3tNhyBH8Pw",
   },
   {
     genre: "Web",
@@ -77,6 +79,7 @@ export const workCards: WorkCardProps[] = [
       "ルールが説明されないパズルゲームです。インタラクティブ音楽を採用。unity1weekで制作しました。",
     imageRef: "/images/works/here-is-one-button.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
+    iframe: "UlbnRByVPQw"
   },
   {
     genre: "Game",
@@ -87,6 +90,7 @@ export const workCards: WorkCardProps[] = [
       "2レーンなのに高難易度なリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。",
     imageRef: "/images/works/circla.gif",
     tags: ["Music", "Unity", "C#", "Figma"],
+    iframe: "bG0ll0R3adY"
   },
   {
     genre: "Music",
@@ -106,6 +110,7 @@ export const workCards: WorkCardProps[] = [
       "地獄に送るためになんとか問答して絞りだすゲームです。unity1weekで制作しました。",
     imageRef: "/images/works/hell.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
+    iframe: "B0zKSR3FhrI"
   },
   {
     genre: "Music",
@@ -120,12 +125,12 @@ export const workCards: WorkCardProps[] = [
 
 export const Skills: SkillProps[] = [
   {
-    genre: "Web制作",
-    skills: "Next.js, TailwindCSS, Vercel, Prisma, Supabase, etc...",
-  },
-  {
     genre: "ゲーム制作",
     skills: "Unity(UniRx/R3, UniTask, VContainer, MessagePipe, etc...), Godot",
+  },
+  {
+    genre: "Web制作",
+    skills: "Next.js, TailwindCSS, Vercel, Prisma, Supabase, etc...",
   },
   {
     genre: "DTM",
@@ -137,7 +142,7 @@ export const Skills: SkillProps[] = [
   },
   {
     genre: "アルゴリズム",
-    skills: "AtCoder rating 900~ (緑)",
+    skills: "AtCoder Rating 900~ (緑)",
   },
   {
     genre: "その他",

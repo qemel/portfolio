@@ -200,3 +200,11 @@
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
+
+.youtube-wrap iframe {
+  margin: 1rem 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+}

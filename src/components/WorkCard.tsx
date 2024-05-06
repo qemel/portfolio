@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Badge } from "./ui/badge";
 import { Label } from "./ui/label";
 import Image from "next/image";
+import YouTube from "react-youtube";
 
 export const WorkCard = ({
   genre,
@@ -21,6 +22,7 @@ export const WorkCard = ({
   description,
   imageRef,
   tags,
+  iframe,
 }: {
   genre: string;
   title: string;
@@ -29,32 +31,41 @@ export const WorkCard = ({
   description: string;
   imageRef: string;
   tags: string[];
+  iframe: string;
 }) => {
   return (
-    <Card className="w-[350px]">
+    <Card className="grid w-[350px] bg-white shadow-lg rounded-lg overflow-hidden">
       <CardHeader>
         <form>
-          <Badge
-            variant={"outline"}
-            className="mb-4 left-2 font-bold text-base"
-          >
-            {genre}
-          </Badge>
+          <div className="pb-4">
+            <Badge variant={"outline"} className="left-2 font-bold text-base">
+              {genre}
+            </Badge>
+          </div>
           <Link href={link}>
-            <Image src={imageRef} alt={title} width={600} height={600} />
+            <Image src={imageRef} alt={title} width={300} height={300} />
           </Link>
+          <div className="pt-4">
+            <Link href={link}>
+              <CardTitle>{title}</CardTitle>
+            </Link>
+          </div>
         </form>
-      </CardHeader>
-      <CardContent>
-        <Link href={link}>
-          <CardTitle>{title}</CardTitle>
-        </Link>
-        <div className="py-2">
+        <div className="pt-2">
           <CardDescription>{date}</CardDescription>
         </div>
-        <div className="py-2">
+        <div className="pt-4">
           <CardDescription>{description}</CardDescription>
         </div>
+      </CardHeader>
+      <CardContent>
+        {iframe !== "" && (
+          <>
+            <div className="youtube-wrap">
+              <YouTube videoId={iframe} />
+            </div>
+          </>
+        )}
       </CardContent>
       <CardFooter>
         <div className="flex flex-col">
