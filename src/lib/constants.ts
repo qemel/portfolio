@@ -52,6 +52,17 @@ export const genreBegins: GenreBeginProps[] = [
 export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
+    title: "やまのぼり",
+    date: "2024-05",
+    link: "https://unityroom.com/games/yamanobori",
+    description:
+      "操作感を求めた3Dアクションゲームです。unity1weekで制作しました。",
+    imageRef: "/images/works/yamanobori.png",
+    iframe: "rLAVu3EoR8Q",
+    tags: ["Unity", "C#", "Music"],
+  },
+  {
+    genre: "Game",
     title: "White / Black",
     date: "2024-03",
     link: "https://unityroom.com/games/worb",
