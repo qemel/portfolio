@@ -56,7 +56,7 @@ export const workCards: WorkCardProps[] = [
     date: "2024-05",
     link: "https://unityroom.com/games/yamanobori",
     description:
-      "操作感を求めた3Dアクションゲームです。unity1weekで制作しました。",
+      "操作感を求めた3Dアクションゲームです。",
     imageRef: "/images/works/yamanobori.png",
     iframe: "rLAVu3EoR8Q",
     tags: ["Unity", "C#", "Music"],
