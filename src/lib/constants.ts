@@ -14,6 +14,7 @@ export interface WorkCardProps {
   imageRef: string;
   tags: string[];
   iframe?: string;
+  githubLink?: string;
 }
 
 export interface SkillProps {
@@ -26,6 +27,11 @@ export const genreBegins: GenreBeginProps[] = [
     genre: "作曲(DTM)",
     beginAt: "2020年4月",
     note: "音ゲー楽曲に憧れて開始。",
+  },
+  {
+    genre: "イラスト",
+    beginAt: "2021年1月",
+    note: "サムネイルを描けた方がいい気がして開始。",
   },
   {
     genre: "プログラミング全般",
@@ -71,6 +77,7 @@ export const workCards: WorkCardProps[] = [
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
     iframe: "a3tNhyBH8Pw",
+    githubLink: "https://github.com/qemel/unity1week_White_or_Black",
   },
   {
     genre: "Web",
@@ -90,7 +97,8 @@ export const workCards: WorkCardProps[] = [
       "ルールが説明されないパズルゲームです。インタラクティブ音楽を採用。unity1weekで制作しました。",
     imageRef: "/images/works/here-is-one-button.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
-    iframe: "UlbnRByVPQw"
+    iframe: "UlbnRByVPQw",
+    githubLink: "https://github.com/qemel/unity1week-Here-is-ONE-Button",
   },
   {
     genre: "Game",
@@ -101,7 +109,8 @@ export const workCards: WorkCardProps[] = [
       "2レーンなのに高難易度なリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。",
     imageRef: "/images/works/circla.gif",
     tags: ["Music", "Unity", "C#", "Figma"],
-    iframe: "bG0ll0R3adY"
+    iframe: "bG0ll0R3adY",
+    githubLink: "https://github.com/qemel/Circla_Scripts",
   },
   {
     genre: "Music",
@@ -148,8 +157,8 @@ export const Skills: SkillProps[] = [
     skills: "Bitwig Studio, FL Studio",
   },
   {
-    genre: "デザイン",
-    skills: "Figma, Aseprite, Affinity Designer",
+    genre: "デザイン/イラスト",
+    skills: "Figma, Aseprite, Affinity Designer, Clip Studio Paint",
   },
   {
     genre: "アルゴリズム",

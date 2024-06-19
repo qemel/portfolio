@@ -108,7 +108,6 @@ export default function Home() {
                 alt="github"
               />
             </a>
-
           </div>
         </section>
 
@@ -143,6 +142,7 @@ export default function Home() {
                     imageRef={workCard.imageRef}
                     tags={workCard.tags}
                     iframe={workCard.iframe || ""}
+                    githubLink={workCard.githubLink || ""}
                   />
                 ))}
             </div>

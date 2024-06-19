@@ -13,6 +13,7 @@ import { Badge } from "./ui/badge";
 import { Label } from "./ui/label";
 import Image from "next/image";
 import YouTube from "react-youtube";
+import { Button } from "./ui/button";
 
 export const WorkCard = ({
   genre,
@@ -23,6 +24,7 @@ export const WorkCard = ({
   imageRef,
   tags,
   iframe,
+  githubLink,
 }: {
   genre: string;
   title: string;
@@ -32,15 +34,23 @@ export const WorkCard = ({
   imageRef: string;
   tags: string[];
   iframe: string;
+  githubLink: string;
 }) => {
   return (
     <Card className="grid w-[350px] bg-white shadow-lg rounded-lg overflow-hidden">
       <CardHeader>
         <form>
-          <div className="pb-4">
+          <div className="pb-4 flex">
             <Badge variant={"outline"} className="left-2 font-bold text-base">
               {genre}
             </Badge>
+            <div className="flex flex-col">
+              <div className="flex space-x-1 pt-1">
+                {tags.sort().map((tag) => (
+                  <Badge variant={"outline"} className="" key={tag}>{tag}</Badge>
+                ))}
+              </div>
+            </div>
           </div>
           <Link href={link}>
             <Image src={imageRef} alt={title} width={300} height={300} />
@@ -59,7 +69,7 @@ export const WorkCard = ({
         </div>
       </CardHeader>
       <CardContent>
-        {iframe !== "" && (
+        {iframe && iframe !== "" && (
           <>
             <div className="youtube-wrap">
               <YouTube videoId={iframe} />
@@ -67,15 +77,15 @@ export const WorkCard = ({
           </>
         )}
       </CardContent>
-      <CardFooter>
-        <div className="flex flex-col">
-          <div className="flex space-x-2 pt-2">
-            {tags.sort().map((tag) => (
-              <Badge key={tag}>{tag}</Badge>
-            ))}
+      <CardContent>
+        {githubLink && githubLink !== "" && (
+          <div className="">
+            <Link href={githubLink}>
+              <Button variant={"default"}>ソースコード(GitHub)</Button>
+            </Link>
           </div>
-        </div>
-      </CardFooter>
+        )}
+      </CardContent>
     </Card>
   );
 };
