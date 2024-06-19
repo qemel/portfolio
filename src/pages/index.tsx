@@ -56,16 +56,8 @@ export default function Home() {
 
         <section id="profile">
           <SectionHeaderText text="Profile" />
-          <p className="text-lg text-center max-md:mx-2">
-            けめるです。主にゲーム開発・作曲・デザイン等をやっております。
-            <br />
-            <br />
-            Game Jamでのチーム開発の経験（デザイナー、プログラマを担当）
-            <br />
-            インターンにて3Dカジュアルゲーム開発の経験（ゲーム制作全体を担当）
-            <br />
-          </p>
-          <div className="pt-16">
+
+          <div className="pt-0">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -87,6 +79,17 @@ export default function Home() {
               </TableBody>
             </Table>
           </div>
+
+          <p className="text-lg text-center max-md:mx-2 pt-16">
+            主にゲーム開発・作曲・デザイン等をしています。
+          </p>
+          <p className="text-lg text-center max-md:mx-2 pt-16">
+            ゲームジャムでのチーム開発（デザイナー、エンジニア）
+            <br />
+            ゲームエンジニアとしてインターン（ハイパーカジュアルゲーム制作全体）
+            <br />
+            ゲームプログラマとしてのアルバイト
+          </p>
         </section>
 
         <section id="links">
