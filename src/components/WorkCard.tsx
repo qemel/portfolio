@@ -44,13 +44,13 @@ export const WorkCard = ({
             <Badge variant={"outline"} className="left-2 font-bold text-base">
               {genre}
             </Badge>
-            <div className="flex flex-col">
+            <div className="pl-1 flex flex-col">
               <div className="flex space-x-1 pt-1">
                 {tags.sort().map((tag) => (
                   <Badge variant={"outline"} className="" key={tag}>{tag}</Badge>
                 ))}
               </div>
-            </div>
+            </div>q
           </div>
           <Link href={link}>
             <Image src={imageRef} alt={title} width={300} height={300} />
