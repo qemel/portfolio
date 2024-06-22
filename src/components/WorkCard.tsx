@@ -50,7 +50,7 @@ export const WorkCard = ({
                   <Badge variant={"outline"} className="" key={tag}>{tag}</Badge>
                 ))}
               </div>
-            </div>q
+            </div>
           </div>
           <Link href={link}>
             <Image src={imageRef} alt={title} width={300} height={300} />
