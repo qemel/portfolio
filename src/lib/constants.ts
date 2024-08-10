@@ -26,12 +26,12 @@ export const genreBegins: GenreBeginProps[] = [
   {
     genre: "作曲(DTM)",
     beginAt: "2020年4月",
-    note: "音ゲー楽曲などに憧れてゆるく始める",
+    note: "音ゲー楽曲などに憧れてゆるくスタート",
   },
   {
     genre: "イラスト",
     beginAt: "2021年1月",
-    note: "曲のサムネイルを描けた方がいい気がして開始",
+    note: "曲のサムネイルを描けた方がいい気がしてスタート",
   },
   {
     genre: "プログラミング全般",
@@ -51,12 +51,12 @@ export const genreBegins: GenreBeginProps[] = [
   {
     genre: "デザイン",
     beginAt: "2023年4月",
-    note: "ゲーム・MVに必要なデザインをFigma等でスタート",
+    note: "ゲーム・MVに必要なデザインをFigmaでスタート",
   },
   {
     genre: "Web制作",
     beginAt: "2023年11月",
-    note: "ポートフォリオ作成のため",
+    note: "ポートフォリオ作成",
   },
   {
     genre: "インターン",
@@ -66,7 +66,7 @@ export const genreBegins: GenreBeginProps[] = [
   {
     genre: "アルバイト",
     beginAt: "2024年5月",
-    note: "コンシューマ向けゲームの実装を担当（現在進行形）",
+    note: "コンシューマ向けゲームの実装を担当中（現在進行形）",
   },
 ];
 
