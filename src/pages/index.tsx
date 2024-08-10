@@ -57,12 +57,16 @@ export default function Home() {
         <section id="profile">
           <SectionHeaderText text="Profile" />
 
+          <p className="text-lg text-center max-md:mx-2 pt-8 pb-12">
+            ゲーム開発 / サウンド / デザイン
+          </p>
+
           <div className="pt-0">
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>分野</TableHead>
-                  <TableHead>開始時期</TableHead>
+                  <TableHead>時期</TableHead>
                   <TableHead>備考</TableHead>
                 </TableRow>
               </TableHeader>
@@ -79,17 +83,6 @@ export default function Home() {
               </TableBody>
             </Table>
           </div>
-
-          <p className="text-lg text-center max-md:mx-2 pt-16">
-            主にゲーム開発・作曲・デザイン等をしています。
-          </p>
-          <p className="text-lg text-center max-md:mx-2 pt-16">
-            ゲームジャムでのチーム開発（デザイナー、エンジニア）
-            <br />
-            ゲームエンジニアとしてインターン（ハイパーカジュアルゲーム制作全体）
-            <br />
-            ゲームプログラマとしてのアルバイト
-          </p>
         </section>
 
         <section id="links">

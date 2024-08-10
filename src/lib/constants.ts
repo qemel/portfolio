@@ -26,43 +26,69 @@ export const genreBegins: GenreBeginProps[] = [
   {
     genre: "作曲(DTM)",
     beginAt: "2020年4月",
-    note: "音ゲー楽曲に憧れて開始。",
+    note: "音ゲー楽曲などに憧れてゆるく始める",
   },
   {
     genre: "イラスト",
     beginAt: "2021年1月",
-    note: "サムネイルを描けた方がいい気がして開始。",
+    note: "曲のサムネイルを描けた方がいい気がして開始",
   },
   {
     genre: "プログラミング全般",
     beginAt: "2022年3月",
-    note: "競技プログラミング(AtCoder)きっかけでC++を開始。今はC#が中心。",
+    note: "競技プログラミング(AtCoder)きっかけでC++からスタート",
   },
   {
     genre: "ゲーム制作",
     beginAt: "2023年3月",
-    note: "ゲームを作れるという発想がなかったが、作れると知って開始。主にUnity。",
+    note: "ゲームを個人でも作れると知ってUnityを使い始める",
+  },
+  {
+    genre: "初ゲーム完成",
+    beginAt: "2023年3月",
+    note: "パズルゲームを作成",
   },
   {
     genre: "デザイン",
-    beginAt: "2023年3月",
-    note: "ゲーム・MVに必要なデザインを開始。",
+    beginAt: "2023年4月",
+    note: "ゲーム・MVに必要なデザインをFigma等でスタート",
   },
   {
     genre: "Web制作",
     beginAt: "2023年11月",
-    note: "ポートフォリオ作成をきっかけに開始。",
+    note: "ポートフォリオ作成のため",
+  },
+  {
+    genre: "インターン",
+    beginAt: "2024年2月",
+    note: "ハイパーカジュアルゲーム制作、配信を経験",
+  },
+  {
+    genre: "アルバイト",
+    beginAt: "2024年5月",
+    note: "コンシューマ向けゲームの実装を担当（現在進行形）",
   },
 ];
 
 export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
+    title: "こなつのえにっき",
+    date: "2024-08",
+    link: "https://unityroom.com/games/konatsu_enikki",
+    description:
+      "夏休みの絵日記を追うクリッカー・ビジュアルノベル風ゲームです。2日で2人で開発。自分は実装を担当しました。",
+    imageRef: "/images/works/konatsu-enikki.gif",
+    tags: ["Unity", "C#"],
+    githubLink: "https://github.com/qemel/unity2days-konatsu-no-enikki",
+  },
+  {
+    genre: "Game",
     title: "やまのぼり",
     date: "2024-05",
     link: "https://unityroom.com/games/yamanobori",
     description:
-      "操作感を求めた3Dアクションゲームです。",
+      "操作感を求めた3Dアクションゲームです。タイムアタックがしやすい設計になっています。1週間程度で作成しました。",
     imageRef: "/images/works/yamanobori.png",
     iframe: "rLAVu3EoR8Q",
     tags: ["Unity", "C#", "Music"],
@@ -73,7 +99,7 @@ export const workCards: WorkCardProps[] = [
     date: "2024-03",
     link: "https://unityroom.com/games/worb",
     description:
-      "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキング8位獲得)。",
+      "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキング8位)。",
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
     iframe: "a3tNhyBH8Pw",
@@ -106,7 +132,7 @@ export const workCards: WorkCardProps[] = [
     date: "2023-08",
     link: "https://unityroom.com/games/circla",
     description:
-      "2レーンなのに高難易度なリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。",
+      "視覚的に難しいリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。1カ月程度で作成。",
     imageRef: "/images/works/circla.gif",
     tags: ["Music", "Unity", "C#", "Figma"],
     iframe: "bG0ll0R3adY",
@@ -117,7 +143,7 @@ export const workCards: WorkCardProps[] = [
     title: "Circla Album",
     date: "2023-08",
     link: "https://qemel-blog-nextjs.vercel.app/",
-    description: "Circlaの楽曲をまとめたアルバムです。",
+    description: "自作ゲームCirclaの楽曲をまとめたアルバムです。",
     imageRef: "/images/works/circla-album.png",
     tags: ["Music", "Figma"],
   },
@@ -127,7 +153,7 @@ export const workCards: WorkCardProps[] = [
     date: "2023-12",
     link: "https://unityroom.com/games/jigokuno_okuribito",
     description:
-      "地獄に送るためになんとか問答して絞りだすゲームです。unity1weekで制作しました。",
+      "地獄に送るためになんとか問答して絞りだすストーリーゲームです。unity1weekで制作しました。",
     imageRef: "/images/works/hell.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
     iframe: "B0zKSR3FhrI"
@@ -135,9 +161,9 @@ export const workCards: WorkCardProps[] = [
   {
     genre: "Music",
     title: "Songs",
-    date: "2020-09から",
+    date: "2020-09~",
     link: "https://www.youtube.com/playlist?list=PL-cydTzyfRl83vy7VTp5JmSoUCKKzcnua",
-    description: "その他楽曲です。",
+    description: "その他楽曲",
     imageRef: "/images/works/nobs.gif",
     tags: ["Music", "Aseprite"],
   },
