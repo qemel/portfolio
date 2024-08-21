@@ -1,39 +1,33 @@
-import React from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import React from "react";
+import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
   PrevButton,
   NextButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
-import useEmblaCarousel from 'embla-carousel-react'
-import Image from 'next/image'
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
+import { workImagesRef } from "@/lib/constants";
 
 type PropType = {
-  slides: number[]
-  options?: EmblaOptionsType
-}
-
-const workImagesRef = [
-  '/images/works/carousel-circla.png',
-  '/images/works/carousel-here-is-one-button.png',
-  '/images/works/carousel-nobs.gif',
-  '/images/works/carousel-patient1.gif',
-]
+  slides: number[];
+  options?: EmblaOptionsType;
+};
 
 const WorksCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const { slides, options } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <section className="embla">
@@ -41,7 +35,12 @@ const WorksCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <Image src={workImagesRef[index]} width={800} height={600} alt={`works-${index + 1}`} />
+              <Image
+                src={workImagesRef[index]}
+                width={800}
+                height={600}
+                alt={`works-${index + 1}`}
+              />
               {/* <div className="embla__slide__number">{index + 1}</div> */}
             </div>
           ))}
@@ -59,15 +58,15 @@ const WorksCarousel: React.FC<PropType> = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+              className={"embla__dot".concat(
+                index === selectedIndex ? " embla__dot--selected" : ""
               )}
             />
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WorksCarousel
+export default WorksCarousel;

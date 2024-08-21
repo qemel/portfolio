@@ -12,6 +12,14 @@ export interface WorkCardProps {
   githubLink?: string;
 }
 
+export const workImagesRef = [
+  '/images/works/carousel-kiro.gif',
+  '/images/works/carousel-here-is-one-button.png',
+  '/images/works/carousel-circla.png',
+  '/images/works/carousel-nobs.gif',
+  '/images/works/carousel-patient1.gif',
+]
+
 export interface SkillProps {
   genre: string;
   skills: string;
