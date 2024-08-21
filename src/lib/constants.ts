@@ -1,3 +1,5 @@
+import { TimelineEvent } from "@/components/GitTreeTimeline";
+
 export interface GenreBeginProps {
   genre: string;
   beginAt: string;
@@ -22,51 +24,60 @@ export interface SkillProps {
   skills: string;
 }
 
-export const genreBegins: GenreBeginProps[] = [
+export const careerEvents: TimelineEvent[] = [
   {
-    genre: "作曲(DTM)",
-    beginAt: "2020年4月",
-    note: "音ゲー楽曲などに憧れてゆるくスタート",
+    year: "2020年4月",
+    title: "作曲(DTM)",
+    description: "音ゲー楽曲などに憧れてゆるく始める",
+    icon: "music"
   },
   {
-    genre: "イラスト",
-    beginAt: "2021年1月",
-    note: "曲のサムネイルを描けた方がいい気がしてスタート",
+    year: "2021年1月",
+    title: "イラスト",
+    description: "曲のサムネイルを描けた方がいい気がして始める",
+    icon: "art"
   },
   {
-    genre: "プログラミング全般",
-    beginAt: "2022年3月",
-    note: "競技プログラミング(AtCoder)きっかけでC++からスタート",
+    year: "2022年3月",
+    title: "プログラミング",
+    description: "競技プログラミング(AtCoder)きっかけでC++を始める",
+    icon: "project"
   },
   {
-    genre: "ゲーム制作",
-    beginAt: "2023年3月",
-    note: "ゲームを個人でも作れると知ってUnityを使い始める",
+    year: "2023年3月",
+    title: "ゲーム制作",
+    description: "ゲームを個人でも作れると知ってUnityを使い始める",
+    icon: "project"
   },
   {
-    genre: "初ゲーム完成",
-    beginAt: "2023年3月",
-    note: "パズルゲームを作成",
+    year: "2023年3月",
+    title: "初の自作ゲーム",
+    description: "パズルゲームを作成, unity1weekにて公開",
+    icon: "work"
   },
   {
-    genre: "デザイン",
-    beginAt: "2023年4月",
-    note: "ゲーム・MVに必要なデザインをFigmaでスタート",
+    year: "2023年4月",
+    title: "デザインスタート",
+    description: "ゲーム・MV作成に必要なデザインをFigmaで勉強",
+    icon: "art"
   },
   {
-    genre: "Web制作",
-    beginAt: "2023年11月",
-    note: "ポートフォリオ作成",
+    year: "2023年11月",
+    title: "Web制作",
+    description: "ポートフォリオを制作",
+    icon: "project"
   },
   {
-    genre: "インターン",
-    beginAt: "2024年2月",
-    note: "ハイパーカジュアルゲーム制作、配信を経験",
+    year: "2024年2月",
+    title: "インターン",
+    description: "ハイパーカジュアルゲーム制作・配信を経験",
+    icon: "work"
   },
   {
-    genre: "アルバイト",
-    beginAt: "2024年5月",
-    note: "コンシューマ向けゲームの実装を担当中（現在進行形）",
+    year: "2024年5月",
+    title: "アルバイト",
+    description: "コンシューマ向けゲームの実装を担当中（現在進行形）",
+    icon: "work"
   },
 ];
 

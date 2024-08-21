@@ -23,9 +23,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Skills, genreBegins, workCards } from "@/lib/constants";
+import { Skills, careerEvents, genreBegins, workCards } from "@/lib/constants";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import GitTreeTimeline, { TimelineEvent } from "@/components/GitTreeTimeline";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 const OPTIONS: EmblaOptionsType = { loop: true };
@@ -56,32 +57,8 @@ export default function Home() {
 
         <section id="profile">
           <SectionHeaderText text="Profile" />
-
-          <p className="text-lg text-center max-md:mx-2 pt-8 pb-12">
-            ゲーム開発 / サウンド / デザイン
-          </p>
-
           <div className="pt-0">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>分野</TableHead>
-                  <TableHead>時期</TableHead>
-                  <TableHead>備考</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {genreBegins.map((genreBegin, index) => (
-                  <TableRow key={index}>
-                    <TableCell className="font-medium">
-                      {genreBegin.genre}
-                    </TableCell>
-                    <TableCell>{genreBegin.beginAt}</TableCell>
-                    <TableCell>{genreBegin.note}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+            <GitTreeTimeline events={careerEvents}></GitTreeTimeline>
           </div>
         </section>
 
