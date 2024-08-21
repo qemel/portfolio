@@ -73,11 +73,21 @@ export const genreBegins: GenreBeginProps[] = [
 export const workCards: WorkCardProps[] = [
   {
     genre: "Game",
+    title: "帰路",
+    date: "2024-08",
+    link: "https://unityroom.com/games/kaerimichi",
+    description:
+      "少女を家に帰してあげるリバースパズルゲーム。unity1weekにて2人で共同開発。サウンド・デザイン（ドット絵、UI等）・クラス設計（一部）を担当。",
+    imageRef: "/images/works/kiro.gif",
+    tags: ["Unity", "C#"],
+  },
+  {
+    genre: "Game",
     title: "こなつのえにっき",
     date: "2024-08",
     link: "https://unityroom.com/games/konatsu_enikki",
     description:
-      "夏休みの絵日記を追うクリッカー・ビジュアルノベル風ゲームです。2日で2人で開発。自分は実装を担当しました。",
+      "夏休みの絵日記を追うクリッカー・ビジュアルノベル風ゲーム。2日で2人で共同開発。実装を担当。",
     imageRef: "/images/works/konatsu-enikki.gif",
     tags: ["Unity", "C#"],
     githubLink: "https://github.com/qemel/unity2days-konatsu-no-enikki",
@@ -88,7 +98,7 @@ export const workCards: WorkCardProps[] = [
     date: "2024-05",
     link: "https://unityroom.com/games/yamanobori",
     description:
-      "操作感を求めた3Dアクションゲームです。タイムアタックがしやすい設計になっています。1週間程度で作成しました。",
+      "操作感を求めた3Dアクションゲーム。タイムアタックがしやすい設計を目指した。1週間程度で作成。",
     imageRef: "/images/works/yamanobori.png",
     iframe: "rLAVu3EoR8Q",
     tags: ["Unity", "C#", "Music"],
@@ -99,7 +109,7 @@ export const workCards: WorkCardProps[] = [
     date: "2024-03",
     link: "https://unityroom.com/games/worb",
     description:
-      "白黒の世界を行き来するパズルゲームです。unity1weekで制作しました(総合ランキング8位)。",
+      "白黒の世界を行き来するパズルゲーム。unity1weekで制作(総合ランキング8位)。",
     imageRef: "/images/works/white-or-black.png",
     tags: ["Unity", "C#", "Music"],
     iframe: "a3tNhyBH8Pw",
@@ -110,7 +120,7 @@ export const workCards: WorkCardProps[] = [
     title: "けめるのインターネット",
     date: "2023-11",
     link: "https://qemel-blog-nextjs.vercel.app/",
-    description: "自分用のサイトです。",
+    description: "自分用のサイト",
     imageRef: "/images/works/qemel-blog-nextjs.png",
     tags: ["Next.js", "daisyUI", "TailWindCSS"],
   },
@@ -120,7 +130,7 @@ export const workCards: WorkCardProps[] = [
     date: "2023-09",
     link: "https://unityroom.com/games/here_is_one_button",
     description:
-      "ルールが説明されないパズルゲームです。インタラクティブ音楽を採用。unity1weekで制作しました。",
+      "ルールが説明されないパズルゲーム。インタラクティブ音楽を採用。unity1weekで制作。",
     imageRef: "/images/works/here-is-one-button.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
     iframe: "UlbnRByVPQw",
@@ -132,7 +142,7 @@ export const workCards: WorkCardProps[] = [
     date: "2023-08",
     link: "https://unityroom.com/games/circla",
     description:
-      "視覚的に難しいリズムゲームです。UniRxを利用し、MVPパターンを意識して作成しました。1カ月程度で作成。",
+      "視覚的に難しいリズムゲーム。UniRxを利用し、MVPパターンを意識して作成。1カ月程度で作成。",
     imageRef: "/images/works/circla.gif",
     tags: ["Music", "Unity", "C#", "Figma"],
     iframe: "bG0ll0R3adY",
@@ -143,7 +153,7 @@ export const workCards: WorkCardProps[] = [
     title: "Circla Album",
     date: "2023-08",
     link: "https://qemel-blog-nextjs.vercel.app/",
-    description: "自作ゲームCirclaの楽曲をまとめたアルバムです。",
+    description: "自作ゲームCirclaの楽曲をまとめたアルバム",
     imageRef: "/images/works/circla-album.png",
     tags: ["Music", "Figma"],
   },
@@ -153,10 +163,10 @@ export const workCards: WorkCardProps[] = [
     date: "2023-12",
     link: "https://unityroom.com/games/jigokuno_okuribito",
     description:
-      "地獄に送るためになんとか問答して絞りだすストーリーゲームです。unity1weekで制作しました。",
+      "地獄に送るためになんとか問答して絞りだすストーリーゲーム。unity1weekで制作。",
     imageRef: "/images/works/hell.png",
     tags: ["Music", "Unity", "C#", "Aseprite"],
-    iframe: "B0zKSR3FhrI"
+    iframe: "B0zKSR3FhrI",
   },
   {
     genre: "Music",
