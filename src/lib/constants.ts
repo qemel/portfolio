@@ -1,12 +1,5 @@
 import { TimelineEvent } from "@/components/GitTreeTimeline";
 
-export interface GenreBeginProps {
-  genre: string;
-  beginAt: string;
-  // 備考
-  note: string;
-}
-
 export interface WorkCardProps {
   genre: string;
   title: string;

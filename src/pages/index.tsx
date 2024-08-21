@@ -23,7 +23,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Skills, careerEvents, genreBegins, workCards } from "@/lib/constants";
+import { Skills, careerEvents, workCards } from "@/lib/constants";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import GitTreeTimeline, { TimelineEvent } from "@/components/GitTreeTimeline";
@@ -64,7 +64,7 @@ export default function Home() {
 
         <section id="links">
           <SectionHeaderText text="Links" />
-          <div className="flex flex-row items-center space-x-8">
+          <div className="flex flex-row items-center space-x-8 mb-4">
             <a href="https://zenn.dev/qemel">
               <Image
                 src="/images/social-icons/logo-only.svg"
