@@ -58,7 +58,7 @@ export const careerEvents: TimelineEvent[] = [
   },
   {
     year: "2023年4月",
-    title: "デザインスタート",
+    title: "デザイン",
     description: "ゲーム・MV作成に必要なデザインをFigmaで勉強",
     icon: "art"
   },
