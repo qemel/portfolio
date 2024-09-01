@@ -101,7 +101,7 @@ export default function Home() {
             </SelectContent>
           </Select>
           <ScrollRevealContainer>
-            <div className="grid grid-cols-3 pt-8 gap-4 space-y-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-8 gap-4 space-y-1">
               {filteredWorkCards
                 .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 .map((workCard, index) => (
