@@ -14,6 +14,7 @@ export interface WorkCardProps {
 
 export const workImagesRef = [
   '/images/works/carousel-kiro.gif',
+  '/images/works/carousel-white-or-black.gif',
   '/images/works/carousel-here-is-one-button.png',
   '/images/works/carousel-circla.png',
   '/images/works/carousel-nobs.gif',
@@ -91,7 +92,7 @@ export const workCards: WorkCardProps[] = [
     description:
       "少女を家に帰してあげるリバースパズルゲーム。unity1weekにて2人で共同開発。サウンド・デザイン（ドット絵、UI等）・クラス設計（一部）を担当。",
     imageRef: "/images/works/kiro.gif",
-    tags: ["Unity", "C#"],
+    tags: ["Unity", "C#", "Music"],
   },
   {
     genre: "Game",
