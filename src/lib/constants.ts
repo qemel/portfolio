@@ -194,11 +194,11 @@ export const workCards: WorkCardProps[] = [
 
 export const Skills: SkillProps[] = [
   {
-    genre: "ゲーム制作",
-    skills: "Unity(UniRx/R3, UniTask, VContainer, MessagePipe, etc...), Godot",
+    genre: "ゲーム",
+    skills: "Unity(UniRx/R3, UniTask, VContainer, VitalRouter, MessagePipe, etc...), Godot",
   },
   {
-    genre: "Web制作",
+    genre: "Web",
     skills: "Next.js, TailwindCSS, Vercel, Prisma, Supabase, etc...",
   },
   {
@@ -215,6 +215,6 @@ export const Skills: SkillProps[] = [
   },
   {
     genre: "その他",
-    skills: "基本情報技術者, TOEIC 895点",
+    skills: "基本情報技術者, TOEIC Score 895",
   },
 ];

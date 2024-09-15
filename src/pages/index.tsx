@@ -122,6 +122,25 @@ export default function Home() {
           </ScrollRevealContainer>
         </section>
 
+        <section id="others">
+          <SectionHeaderText text="Others" />
+          <div className="text-center py-4 text-xl">
+            unity1week online共有会登壇
+          </div>
+          <div className="">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/d5kQajLO1Nk?si=kmmN9djqcIX5AKVR&amp;start=2977"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
         <section id="skills">
           <SectionHeaderText text="Skills" />
           <div>
