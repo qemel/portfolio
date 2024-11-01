@@ -92,6 +92,7 @@ export const workCards: WorkCardProps[] = [
     description:
       "少女を家に帰してあげるリバースパズルゲーム。unity1weekにて2人で共同開発。サウンド・デザイン（ドット絵、UI等）・クラス設計（一部）を担当。",
     imageRef: "/images/works/kiro.gif",
+    iframe: "XGdgj0NeaCdFc_sR",
     tags: ["Unity", "C#", "Music"],
   },
   {
