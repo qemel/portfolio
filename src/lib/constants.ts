@@ -85,6 +85,17 @@ export const careerEvents: TimelineEvent[] = [
 
 export const workCards: WorkCardProps[] = [
   {
+    genre: "Library",
+    title: "PureFsm",
+    date: "2024-11",
+    link: "https://github.com/qemel/PureFsm",
+    description:
+      "Unityで使えるシンプルなステートマシンライブラリ。UniTaskやDIコンテナとの親和性を重視して作成。",
+    imageRef: "/images/works/purefsm.png",
+    tags: ["Unity", "C#"],
+    githubLink: "https://github.com/qemel/PureFsm",
+  },
+  {
     genre: "Game",
     title: "帰路",
     date: "2024-08",
