@@ -127,6 +127,7 @@ export const workCards: WorkCardProps[] = [
     imageRef: "/images/works/yamanobori.png",
     iframe: "rLAVu3EoR8Q",
     tags: ["Unity", "C#", "Music"],
+    githubLink: "https://github.com/qemel/Yamanobori-Script",
   },
   {
     genre: "Game",
