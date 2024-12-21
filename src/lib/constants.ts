@@ -105,6 +105,7 @@ export const workCards: WorkCardProps[] = [
     imageRef: "/images/works/kiro.gif",
     iframe: "FQOYJJKaf2s",
     tags: ["Unity", "C#", "Music"],
+    githubLink: "https://github.com/qemel/kiro-scripts-202412",
   },
   {
     genre: "Game",
