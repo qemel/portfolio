@@ -63,8 +63,14 @@ export default function Home() {
         </section>
 
         <section id="links">
+
           <SectionHeaderText text="Links" />
-          <div className="flex flex-row items-center space-x-8 mb-4">
+
+          <h5 className="text-l py-8 text-center">
+            主にzennにて技術記事をアウトプットしています。
+          </h5>
+
+          <div className="flex flex-row justify-center items-center space-x-8 mb-4">
             <a href="https://zenn.dev/qemel">
               <Image
                 src="/images/social-icons/logo-only.svg"

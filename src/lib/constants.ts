@@ -13,13 +13,13 @@ export interface WorkCardProps {
 }
 
 export const workImagesRef = [
-  '/images/works/carousel-kiro.gif',
-  '/images/works/carousel-white-or-black.gif',
-  '/images/works/carousel-here-is-one-button.png',
-  '/images/works/carousel-circla.png',
-  '/images/works/carousel-nobs.gif',
-  '/images/works/carousel-patient1.gif',
-]
+  "/images/works/carousel-kiro.gif",
+  "/images/works/carousel-white-or-black.gif",
+  "/images/works/carousel-here-is-one-button.png",
+  "/images/works/carousel-circla.png",
+  "/images/works/carousel-nobs.gif",
+  "/images/works/carousel-patient1.gif",
+];
 
 export interface SkillProps {
   genre: string;
@@ -31,59 +31,70 @@ export const careerEvents: TimelineEvent[] = [
     year: "2020年4月",
     title: "作曲(DTM)",
     description: "音ゲー楽曲などに憧れてゆるく始める",
-    icon: "music"
+    icon: "music",
   },
   {
     year: "2021年1月",
     title: "イラスト",
     description: "曲のサムネイルを描けた方がいい気がして始める",
-    icon: "art"
+    icon: "art",
   },
   {
     year: "2022年3月",
     title: "プログラミング",
     description: "競技プログラミング(AtCoder)きっかけでC++を始める",
-    icon: "project"
+    icon: "project",
   },
   {
     year: "2023年3月",
     title: "ゲーム制作",
     description: "ゲームを個人でも作れると知ってUnityを使い始める",
-    icon: "project"
+    icon: "project",
   },
   {
     year: "2023年3月",
     title: "初の自作ゲーム",
     description: "パズルゲームを作成, unity1weekにて公開",
-    icon: "work"
+    icon: "work",
   },
   {
     year: "2023年4月",
     title: "デザイン",
     description: "ゲーム・MV作成に必要なデザインをFigmaで勉強",
-    icon: "art"
+    icon: "art",
   },
   {
     year: "2023年11月",
     title: "Web制作",
     description: "ポートフォリオを制作",
-    icon: "project"
+    icon: "project",
   },
   {
     year: "2024年2月",
     title: "インターン",
     description: "ハイパーカジュアルゲーム制作・配信を経験",
-    icon: "work"
+    icon: "work",
   },
   {
     year: "2024年5月",
     title: "アルバイト",
     description: "コンシューマ向けゲームの実装を担当中（現在進行形）",
-    icon: "work"
+    icon: "work",
   },
 ];
 
 export const workCards: WorkCardProps[] = [
+  {
+    genre: "Game",
+    title:
+      "ゼロからはじまるクリスマスパーティー ～私だけクリスマスがないなんて許せない～",
+    date: "2024-12",
+    link: "https://unityroom.com/games/no-christmas",
+    description:
+      "アップグレードを駆使してクリスマスの飾り付けを頑張りながら生き抜くカオスな2Dプラットフォーマー。unity1weekにて2人で作成。エンジニア担当。",
+    imageRef: "/images/works/no-image.png",
+    tags: ["Unity", "C#", "Music"]
+  },
   {
     genre: "Library",
     title: "PureFsm",
@@ -91,7 +102,7 @@ export const workCards: WorkCardProps[] = [
     link: "https://github.com/qemel/PureFsm",
     description:
       "Unityで使えるシンプルなステートマシンライブラリ。UniTaskやDIコンテナとの親和性を重視して作成。",
-    imageRef: "/images/works/purefsm.png",
+    imageRef: "/images/works/no-image.png",
     tags: ["Unity", "C#"],
     githubLink: "https://github.com/qemel/PureFsm",
   },
@@ -209,11 +220,12 @@ export const workCards: WorkCardProps[] = [
 export const Skills: SkillProps[] = [
   {
     genre: "ゲーム",
-    skills: "Unity(UniRx/R3, UniTask, VContainer, VitalRouter, MessagePipe, etc...), Godot",
+    skills:
+      "Unity(UniRx/R3, UniTask, VContainer, VitalRouter, MessagePipe, etc...), Godot",
   },
   {
     genre: "Web",
-    skills: "Next.js, TailwindCSS, Vercel, Prisma, Supabase, etc...",
+    skills: "Next.js, TailwindCSS, Vercel, etc...",
   },
   {
     genre: "DTM",
@@ -229,6 +241,6 @@ export const Skills: SkillProps[] = [
   },
   {
     genre: "その他",
-    skills: "基本情報技術者, TOEIC Score 895",
+    skills: "基本情報技術者, CGエンジニア（ベーシック）, TOEIC Score 895",
   },
 ];
